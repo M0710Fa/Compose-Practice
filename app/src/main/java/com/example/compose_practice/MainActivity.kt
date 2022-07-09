@@ -44,8 +44,8 @@ fun Conversation(messages: List<Message>){
 fun MessageCard(message: Message){
     Row(modifier = Modifier.padding(all = 8.dp)) {
         OverLapImage(
-            foreId = R.drawable.ic_launcher_background,
-            backId = R.drawable.ic_launcher_foreground
+            foreId = R.drawable.ic_launcher_foreground,
+            backId = R.drawable.ic_launcher_background
         )
         Spacer(modifier = Modifier.width(8.dp))
         Column() {
@@ -68,18 +68,17 @@ fun MessageCard(message: Message){
 @Composable
 fun OverLapImage(foreId: Int, backId: Int){
     Box(
-
         modifier = Modifier
             .size(40.dp)
             .clip(CircleShape)
     ) {
         Image(
-            painter = painterResource(id = foreId),
-            contentDescription = "fore",
-        )
-        Image(
             painter = painterResource(id = backId),
             contentDescription = "back",
+        )
+        Image(
+            painter = painterResource(id = foreId),
+            contentDescription = "fore",
         )
     }
 }
