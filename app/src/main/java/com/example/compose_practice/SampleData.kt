@@ -1,9 +1,12 @@
 package com.example.compose_practice.ui.theme
 
+import androidx.compose.runtime.Stable
+
 data class Message(
     val author: String,
     val msg: String
 )
+
 
 object SampleData {
     // Sample conversation data
